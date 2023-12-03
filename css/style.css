@@ -1,0 +1,574 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --secondry-color: #0078ff;
+    --white-color: #ffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #1e1e1e;
+}
+ul {
+    list-style: none;
+}
+
+/*Nav bar Section*/
+.nav {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.nav .active {
+    position: relative;
+}
+.nav .nav-link::before {
+    content: '';
+    width: 0;
+    transition: 0.4s width;
+}
+.navbar-nav li {
+    margin: 0;
+}
+.navbar-nav li a {
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.navbar-nav li a:hover {
+    color: white;
+}
+.dropdown ul li a {
+    color: #1e1e1e;
+    transition: 0.4s;
+}
+.dropdown ul li a:hover {
+    color: #0078ff;
+}
+
+.nav .active::before,
+.navbar-nav li:hover .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0.6rem;
+    width: 60%;
+    height: 3px;
+    background-color: white;
+}
+.dropdown:hover .dropdown-menu[aria-labelledby='dropdownMenuButton2'] {
+    display: block;
+}
+.dropdown.drop-2:hover .dropdown-menu[aria-labelledby='dropdownMenuButton1'] {
+    display: block;
+
+    transform: translate(-100%, -20%);
+    position: absolute;
+}
+
+/*Home Section*/
+#home {
+    background: url(../images/hero-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#home h1 {
+    font-size: 72px;
+}
+#home p {
+    font-size: 40px;
+    position: relative;
+
+    font-weight: 600;
+}
+#home p::before {
+    content: '';
+    position: relative;
+    animation: typed 15s infinite;
+}
+#home p::after {
+    content: '|';
+    position: relative;
+
+    font-weight: 600;
+    animation: type-stake 1s infinite linear;
+}
+@media screen and (max-width: 768px) {
+    #home h1 {
+        font-size: 3rem;
+    }
+    #home p {
+        font-size: 1.5rem;
+    }
+}
+/*freelancer photographer designer developer */
+@keyframes type-stake {
+    0% {
+        opacity: 100%;
+    }
+    33% {
+        opacity: 50%;
+    }
+    66% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 100%;
+    }
+}
+@keyframes typed {
+    0% {
+        content: 'D';
+    }
+    1% {
+        content: 'De';
+    }
+    2% {
+        content: 'Des';
+    }
+    3% {
+        content: 'Desi';
+    }
+    4% {
+        content: 'Desig';
+    }
+    5% {
+        content: 'Design';
+    }
+    6% {
+        content: 'Designe';
+    }
+    7%,
+    11% {
+        content: 'Designer';
+    }
+    12% {
+        content: 'Designe';
+    }
+    13% {
+        content: 'Design';
+    }
+    14% {
+        content: 'Desig';
+    }
+    15% {
+        content: 'Desi';
+    }
+    16% {
+        content: 'Des';
+    }
+    17% {
+        content: 'De';
+    }
+    18% {
+        content: 'D';
+    }
+    19% {
+        content: 'De';
+    }
+    20% {
+        content: 'Dev';
+    }
+    21% {
+        content: 'Deve';
+    }
+    22% {
+        content: 'Devel';
+    }
+    23% {
+        content: 'Develo';
+    }
+    24% {
+        content: 'Develop';
+    }
+    25% {
+        content: 'Develope';
+    }
+    26%,
+    31% {
+        content: 'Developer';
+    }
+    32% {
+        content: 'Develope';
+    }
+    33% {
+        content: 'Develop';
+    }
+    34% {
+        content: 'Develo';
+    }
+    35% {
+        content: 'Devel';
+    }
+    36% {
+        content: 'Deve';
+    }
+    37% {
+        content: 'Dev';
+    }
+    38% {
+        content: 'De';
+    }
+    39% {
+        content: 'D';
+    }
+    40% {
+        content: '';
+    }
+    41% {
+        content: 'F';
+    }
+    42% {
+        content: 'Fre';
+    }
+    43% {
+        content: 'Free';
+    }
+    44% {
+        content: 'Freel';
+    }
+    45% {
+        content: 'Freela';
+    }
+    46% {
+        content: 'Freelan';
+    }
+    47% {
+        content: 'Freelanc';
+    }
+    48% {
+        content: 'Freelance';
+    }
+    49%,
+    55% {
+        content: 'Freelancer';
+    }
+    56% {
+        content: 'Freelance';
+    }
+    57% {
+        content: 'Freelanc';
+    }
+    58% {
+        content: 'Freelan';
+    }
+    59% {
+        content: 'Freela';
+    }
+    60% {
+        content: 'Freel';
+    }
+    61% {
+        content: 'Free';
+    }
+    62% {
+        content: 'Fre';
+    }
+    63% {
+        content: 'Fr';
+    }
+    64% {
+        content: 'F';
+    }
+    65% {
+        content: '';
+    }
+    66% {
+        content: 'Ph';
+    }
+    67% {
+        content: 'Pho';
+    }
+    68% {
+        content: 'Phot';
+    }
+    69% {
+        content: 'Photo';
+    }
+    70% {
+        content: 'Photog';
+    }
+    70% {
+        content: 'Photogr';
+    }
+    71% {
+        content: 'Photogra';
+    }
+    72% {
+        content: 'Photograp';
+    }
+    73% {
+        content: 'Photograph';
+    }
+    74% {
+        content: 'Photographe';
+    }
+    78%,
+    84% {
+        content: 'Photographer';
+    }
+    85% {
+        content: 'Photographe';
+    }
+    86% {
+        content: 'Photograph';
+    }
+    87% {
+        content: 'Photograp';
+    }
+    88% {
+        content: 'Photogra';
+    }
+    90% {
+        content: 'Photogr';
+    }
+    91% {
+        content: 'Photog';
+    }
+    92% {
+        content: 'Photo';
+    }
+    93% {
+        content: 'Phot';
+    }
+    94% {
+        content: 'Pho';
+    }
+    95% {
+        content: 'Ph';
+    }
+    96% {
+        content: 'P';
+    }
+    97% {
+        content: '';
+    }
+}
+/*About Section*/
+
+ul span {
+    font-weight: 500;
+}
+ul li {
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 16px;
+    color: black;
+}
+.skills {
+    line-height: 45px;
+}
+.p {
+    height: 12px;
+}
+#about h5 {
+    position: relative;
+    font-size: 2rem;
+}
+#about h5::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: var(--secondry-color);
+    width: 100px;
+    bottom: -12px;
+    left: 0;
+}
+.about-img img {
+    width: 100%;
+}
+@media screen and (max-width: 575px) {
+    .cont {
+        width: 95%;
+        padding-top: 30px;
+    }
+    .about-img img {
+        width: auto;
+
+        margin: 40px 60% 10px 0;
+    }
+    #about ul {
+        padding: 30px 0 0 10px;
+    }
+}
+/*Services*/
+h3 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.heading-p {
+    position: relative;
+}
+.heading-p::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: var(--secondry-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services-card i {
+    border: var(--secondry-color) solid 10px;
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    transition: 0.5s ease;
+}
+.services-card i::before {
+    position: absolute;
+}
+.services-card:hover i {
+    border: 10px solid #cde1f8;
+    background-color: var(--secondry-color);
+    color: var(--white-color);
+}
+/*counter*/
+#counter {
+    background: url(../images/post-3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center center;
+}
+#counter i {
+    border: #cde1f8 solid 10px;
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    transition: 0.5s ease;
+    padding: 2rem;
+}
+#counter i::before {
+    position: absolute;
+}
+/*Portfolio Section*/
+#portfolio .card-body p {
+    font-size: 0.8rem;
+    color: var();
+}
+#portfolio .card-body .icon {
+    font-size: 40px;
+}
+#portfolio .card img {
+    transition: 0.5s;
+}
+#portfolio .card-header {
+    overflow: hidden;
+}
+#portfolio .card:hover img {
+    transform: scale(1.2);
+}
+/*Section testimonials */
+section#testimonials {
+    background: url(./../images/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center center;
+}
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+#blog .card a {
+    text-decoration: none;
+    color: #1e1e1e;
+    transition: 0.4s color;
+}
+#blog .card a:hover {
+    color: var(--secondry-color);
+}
+#blog .card span.badge {
+    transform: translateY(-50%);
+}
+#blog .card .card-footer img {
+    width: 30px;
+}
+/*contact Section*/
+#contact {
+    background: url(./../images/overlay-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#contact form input,
+#contact form textarea {
+    border-radius: 0;
+
+    font-size: 14px;
+    padding: 10px 15px;
+}
+#contact h5 {
+    font-size: 32px;
+    color: #1e1e1e;
+    position: relative;
+}
+#contact h5::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-color: #0078ff;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+}
+#contact .socials i {
+    border: var(--secondry-color) solid 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    transition: 0.5s ease;
+    color: #1e1e1e;
+}
+#contact .socials i::before {
+    position: absolute;
+}
+#contact .socials i:hover {
+    border: 3px solid #cde1f8;
+    background-color: var(--secondry-color);
+    color: var(--white-color);
+} /**/
+@media screen and (max-width: 1024px) {
+    #contact {
+        background-attachment: scroll;
+    }
+}
+footer {
+    background: #0062d3;
+}
+a.scroll-btn {
+    right: 10px;
+    bottom: 10px;
+}
